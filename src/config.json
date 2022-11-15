@@ -1,0 +1,5 @@
+{
+    "api_base_url": "http://192.168.0.196:9000",
+    "min_loading": "250",
+    "base_url": ""
+}

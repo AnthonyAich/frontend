@@ -1,8 +1,45 @@
+/* import font otf */
+@font-face {
+  font-family: 'GreycliffCF';
+  src: url('/public/fonts/GreycliffCF-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* scrollbar customisation */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242423;
+  border-radius: 10px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  width: 100%;
+
+  /* greycliff CF font family */
+  font-family: "GreycliffCF",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
     sans-serif;
+
+  /* font-family: "greycliff", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +48,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* css var bgcolor */
+:root {
+  --bgcolor: #fff5ed;
+}
+
+body {
+  background-color: var(--bgcolor);
+}
+
+    .sidebar{
+      transition:all .2s ease-in-out;
+    }
+
+/* all text */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #242423;
+}
+
+.hoverAnimation {
+  animation: bounce 2s linear infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.line-clamp-1, .line-clamp-2, .line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
