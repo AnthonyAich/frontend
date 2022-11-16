@@ -9,9 +9,6 @@ interface Props {
 
 const SideBar: React.FC<Props> = (props) => {
 
-  // const { logout } = useLogout();
-  // logout();
-
     const [homeActive, setHomeActive] = React.useState(false);
     const [classActive, setClasses] = React.useState(false);
     const [meetingActive, setMeetingActive] = React.useState(false);
