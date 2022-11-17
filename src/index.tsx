@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//brouser router
-import { BrowserRouter } from 'react-router-dom';
+//hashrouter
+import { HashRouter as Router } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(
@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
+  <Router>
     <App />
-  </BrowserRouter>
+  </Router>
   </React.StrictMode>
 );
 
